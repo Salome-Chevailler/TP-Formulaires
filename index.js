@@ -35,3 +35,5 @@ function conversionEuros(event) {
   // afficher le résultat
   document.getElementById("resultat").value = valEuros;
 }
+
+// EXERCICE : VERIFICATION SAISIE
