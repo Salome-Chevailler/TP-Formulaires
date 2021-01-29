@@ -37,3 +37,29 @@ function conversionEuros(event) {
 }
 
 // EXERCICE : VERIFICATION SAISIE
+
+// gérer la saisie d'un mot de passe
+// cible : la zone de saisie
+// event : la saisie d'un caractère -> input
+// action : vérifier la longueur du mot de passe
+
+let cible3 = document.getElementById("passwd");
+
+cible3.addEventListener("input", verifSaisie);
+
+function verifSaisie(event) {
+  // récupérer la valeur saisie
+  let val = document.getElementById("passwd").value.length;
+  if (val < 4) {
+    document.getElementById("msgPasswd").textContent = "longueur faible";
+    document.getElementById("msgPasswd").style.color = "red";
+  }
+  if (val > 4 && val < 8) {
+    document.getElementById("msgPasswd").textContent = "longueur moyenne";
+    document.getElementById("msgPasswd").style.color = "orange";
+  }
+  if (val > 8) {
+    document.getElementById("msgPasswd").textContent = "longueur bonne";
+    document.getElementById("msgPasswd").style.color = "green";
+  }
+}
